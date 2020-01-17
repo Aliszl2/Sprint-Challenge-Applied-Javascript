@@ -32,6 +32,7 @@ function createCarousel() {
   carouselCard.append(leftButton, img1, img2, img3, img4, rightButton);
 
   carouselCard.classList.add("carousel");
+  carouselCard.classList.add("slide");
   leftButton.classList.add("left-button");
   rightButton.classList.add("right-button");
   // img1.id.add("one");
