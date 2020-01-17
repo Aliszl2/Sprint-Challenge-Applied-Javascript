@@ -59,13 +59,13 @@ const totalImgs = carouselImgs.length;
 console.log(totalImgs);
 
 
-const changeImg = (changeIndexX) => {
-	carouselImgs.forEach((img, index) => {
+const changeImg = (changeIndex) => {
+	carouselImgs.forEach((img) => {
 		img.style.display = 'none';
   });
 
   carouselImgs[currentImgIndex].style.display = 'block';
-	console.log(currentImgIndex)
+	console.log(currentImgIndex);
 	if (currentImgIndex === 0 && changeIndex === -1) {
 			currentImgIndex = totalImgs - 1; 
 	} else if (currentImgIndex === (totalImgs - 1) && changeIndex === 1) {
