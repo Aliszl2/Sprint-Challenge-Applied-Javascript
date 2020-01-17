@@ -10,9 +10,9 @@
 axios
   .get("https://lambda-times-backend.herokuapp.com/topics")
   .then(response => {
-    console.log(response);
-    console.log(response.data);
-    console.log(response.data.topics);
+    // console.log(response);
+    // console.log(response.data);
+    // console.log(response.data.topics);
 
     response.data.topics.forEach(topic => {
       const insertTab = document.querySelector(".topics");

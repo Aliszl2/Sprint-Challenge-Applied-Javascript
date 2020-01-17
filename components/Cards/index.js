@@ -20,20 +20,20 @@
 const authorArray = [];
 axios.get('https://lambda-times-backend.herokuapp.com/articles')
     .then((response) => {
-        console.log(response);
+        // console.log(response);
         for (let i = 0; i < response.data.articles.javascript.length; i++) {
             authorArray.push(response.data.articles.javascript[i])
         }
         authorArray.forEach(args => {
             newCard.append(createCard(args.headline, args.authorPhoto, args.authorName));   
         })
-        console.log(authorArray.length);
-        console.log(authorArray);
+        // console.log(authorArray.length);
+        // console.log(authorArray);
     })
     .catch(error => {
         console.log(error);
     });
-console.log(authorArray);
+// console.log(authorArray);
 
 
 function createCard(headline, authorPhoto, authorName) {
@@ -68,4 +68,4 @@ function createCard(headline, authorPhoto, authorName) {
 }
 
 const newCard = document.querySelector('.cards-container');
-console.log(newCard);
+// console.log(newCard);
