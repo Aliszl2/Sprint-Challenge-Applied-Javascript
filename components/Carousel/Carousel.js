@@ -48,6 +48,37 @@ function createCarousel() {
 
   return carouselCard;
 }
+let currentImgIndex =0;
+const leftButton = document.querySelector(".left-button");
+console.log(leftButton);
+const rightButton = document.querySelector(".right-button");
+console.log(rightButton);
+const carouselImgs = document.querySelectorAll('img');
+console.log(carouselImgs);
+const totalImgs = carouselImgs.length;
+console.log(totalImgs);
+
+
+const changeImg = (changeIndexX) => {
+	carouselImgs.forEach((img, index) => {
+		img.style.display = 'none';
+  });
+
+  carouselImgs[currentImgIndex].style.display = 'block';
+	console.log(currentImgIndex)
+	if (currentImgIndex === 0 && changeIndex === -1) {
+			currentImgIndex = totalImgs - 1; 
+	} else if (currentImgIndex === (totalImgs - 1) && changeIndex === 1) {
+		currentImgIndex = 0;
+	} else {
+			currentImgIndex += changeIndex;
+	}
+}
+
+leftButton.addEventListener('click',  () => changeImg(-1));
+rightButton.addEventListener('click', () => changeImg(1));
+  
+
 
 // const image1 = document.querySelector("#one");
 // const image2 = document.querySelector("#two");
